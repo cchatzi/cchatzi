@@ -1,0 +1,421 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Merriweather", serif;
+  box-sizing: border-box;
+  background-color: rgba(138, 132, 132, 0.342);
+  position: relative;
+  z-index: 50;
+}
+
+.navbar ul li a:hover {
+  color: #708fc0;
+}
+
+.container {
+  text-align: center;
+  padding: 0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  z-index: 100;
+}
+
+.menu-bar-closed {
+  transform: translateY(-80%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.menu-bar-open {
+  transform: translateY(0);
+  transition: transform 0.6s ease-in-out;
+}
+
+.home-link img {
+  height: 12vh;
+}
+
+.home-link .img-closed {
+  transform: rotate(-20deg);
+  transition: transform 0.4s ease-in-out;
+}
+
+.home-link .img-open {
+  transform: rotate(0deg);
+  transition: transform 0.6s ease-in-out;
+}
+
+p {
+  text-align: justify;
+  max-width: 960px;
+}
+
+.firstLetter::first-letter {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+
+.fa-twitter {
+  background: #55acee;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-skype {
+  background: #00aff0;
+  color: white;
+}
+
+.fa-envelope {
+  background: #00aff0;
+  color: white;
+}
+
+@media only screen and (max-width: 949px) {
+  /**********************************
+  GENERAL
+  ***********************************/
+
+  .menu-page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 60vh;
+    width: 100%;
+    background-color: #141f31;
+    position: fixed;
+    z-index: 10;
+  }
+
+  header {
+    position: absolute;
+    top: 20vh;
+    width: 100%;
+    z-index: 1;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25vh;
+  }
+
+  .title h1 {
+    font-weight: bold;
+    font-size: 2.5em;
+    padding: 0 3vw;
+  }
+
+  .dev {
+    display: block;
+    width: 100%;
+    padding-top: 3vh;
+    text-align: right;
+    font-size: 1.2em;
+    font-family: "League Script", cursive;
+  }
+
+  .navbar {
+    height: 40vh;
+    width: 100%;
+  }
+
+  .navbar ul {
+    height: inherit;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .home-link {
+    height: 17.5vh;
+    width: 17.5vh;
+
+    border-left: 5px solid #fff;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #000102;
+    border-bottom: 5px solid #fff;
+    box-shadow: 2px 2px 20px 10px #000000;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -7.5vh;
+    left: 0;
+    background-color: #141f31;
+    cursor: pointer;
+  }
+  .navbar ul li {
+    font-size: 3vh;
+    width: 60%;
+    margin: 0.5em auto;
+    color: #e7d0d0;
+    padding: 0.5vh;
+    text-decoration: underline;
+    list-style: none;
+  }
+
+  .navbar ul li a {
+    color: #e7d0d0;
+    font-family: "Merriweather", serif;
+  }
+
+  .navbar ul li a:hover {
+    color: #708fc0;
+  }
+
+  .wrapper {
+    position: absolute;
+    top: 45vh;
+    height: 100%;
+  }
+
+  #intro {
+    width: 60%;
+    padding: 0;
+    padding-bottom: 5em;
+    margin: 0 auto;
+  }
+
+  .fa {
+    padding: 16px;
+    font-size: 32px !important;
+    width: 60px;
+    text-align: center;
+    text-decoration: none;
+    margin: 10px;
+    border-radius: 50%;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .title h1 {
+    font-size: 1.7em;
+  }
+
+  .dev {
+    font-size: 1em;
+  }
+
+  .home-link {
+    height: 120px;
+    width: 120px;
+    align-items: center;
+    position: absolute;
+    bottom: -5vh;
+    left: 0;
+  }
+
+  .home-link img {
+    height: 80px;
+  }
+}
+
+@media only screen and (min-width: 541px) and (max-width: 949px) {
+  .home-link {
+    height: 160px;
+    width: 160px;
+    align-items: center;
+    position: absolute;
+    bottom: -7.5vh;
+    left: 0;
+  }
+  .home-link img {
+    height: 110px;
+  }
+  .menu-bar-closed {
+    transform: translateY(-75%);
+  }
+}
+
+@media only screen and (min-width: 950px) {
+  #menu-bar {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 210px;
+    width: 100%;
+    background-color: #141f31;
+    position: fixed;
+    z-index: 10;
+  }
+
+  .menu-bar-closed {
+    transform: translateY(-95px);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .home-link {
+    height: 180px;
+    width: 180px;
+    border-left: 5px solid #fff;
+    border-top: 1px solid #fff;
+    border-right: 1px solid #101927;
+    border-bottom: 5px solid #fff;
+    box-shadow: -20px 15px 30px 10px #0c131f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -9vh;
+    left: 0;
+    background-color: #141f31;
+    cursor: pointer;
+  }
+
+  .menu-bar-open {
+    transform: translateY(0);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .home-link img {
+    height: 125px;
+  }
+
+  .home-link .img-closed {
+    transform: rotate(-20deg);
+    transition: transform 0.4s ease-in-out;
+  }
+
+  .home-link .img-open {
+    transform: rotate(0deg);
+    transition: transform 0.6s ease-in-out;
+  }
+
+  .menu-page {
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-end;
+  }
+
+  header {
+    padding-top: 150px;
+    width: 100%;
+    z-index: 1;
+  }
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    max-width: 1010px;
+    margin: 64px auto;
+  }
+
+  .navbar {
+    height: 90px;
+    width: 100%;
+    margin: 0;
+  }
+
+  .navbar ul {
+    padding: 0;
+
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .navbar ul li {
+    font-family: "Merriweather", serif;
+    font-size: 2em;
+    width: 10%;
+    margin: 0 1em;
+    color: #e7d0d0;
+    padding: 10px 0;
+    margin-bottom: 16px;
+    text-decoration: underline;
+    list-style: none;
+  }
+
+  .navbar ul li a {
+    color: #e7d0d0;
+    font-family: inherit;
+  }
+
+  .wrapper {
+    padding-bottom: 100px;
+  }
+
+  #intro {
+    width: 60%;
+    max-width: 950px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    width: 75%;
+    text-align: left;
+    font-family: inherit;
+    font-size: 4.5vh;
+
+    border-radius: 20px;
+    color: #070d16;
+    font-weight: bold;
+  }
+
+  p {
+    padding-top: 30px;
+    text-align: justify;
+    font-size: 1.4em;
+  }
+
+  .contact {
+    margin-top: 100px;
+    padding-top: 32px;
+  }
+
+  .contact a {
+    margin: 32;
+  }
+
+  .title h1 {
+    font-weight: bold;
+    font-size: 4em;
+    width: 100%;
+    text-align: center;
+    padding: 0 1em;
+  }
+
+  .dev {
+    display: block;
+    width: 95%;
+    text-align: right;
+    font-size: 50px;
+    padding-top: 20px;
+    font-family: "League Script", cursive;
+  }
+}

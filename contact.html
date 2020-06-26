@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>
+      Customer Support Specialist - Christos Chatzicharalampous
+    </title>
+    <link rel="stylesheet" href="style/normalize.style/normalize.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=League+Script&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Changa+One|Open+Sans:400,400i,700,700i&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style/mobile.css" />
+   
+    <link rel="stylesheet" href="style/contactForm.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width:device-width, initial-scale=1.0" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="menu-bar" class="menu-bar-closed">
+        <div class="home-link">
+          <img
+            src="./photo1/logo1.png"
+            class="img-closed"
+            onclick="myFunction();myIcon();"
+            id="button"
+            alt=""
+          />
+        </div>
+        <div class="menu-page">
+          <nav class="navbar">
+            <ul>
+              <li><a href="index.html"> Home</a></li>
+              <li><a href="bio.html"> Resume</a></li>
+              <li><a href="contact.html"> Contact</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+
+      <header>
+        <div class="header">
+          <h1>Get in touch!</h1>
+          <p>I would be more than happy if you want to get in touch and have a chat. The contact form is not functional and it doesn't submit anything; still working on it <span style='font-size:20px;'>&#128513;</span>. Sorry about that. I replaced the submit button, so it pops an alert message. Feel free to use the alternative options. Thank you very much. </p>
+      </header>
+
+    <main>
+        <div class="contact">
+            <a href="https://www.linkedin.com/in/drchatzi/" class="fa fa-linkedin" target="_blank"></a> <br>
+            <a href="https://join.skype.com/invite/CIFV2HEQoKFa" class="fa fa-skype"></a>
+            <a href="mailto:c.chatzicharalampous@gmail.com" class="fa fa-envelope"></a>
+          </div>
+        <div class="wrapper">
+            <section>
+                <div class="form">
+                    <form action="index.html" method="post">
+                      <fieldset class="contact_info">
+                          <legend>Contact</legend>
+        
+                            <label for="name">Full Name</label>
+                            <input required type="text" id="name" name="user_name" placeholder="Required">
+        
+                            <label for="mail">Email Address</label>
+                            <input required type="email" id="mail" name="user_email" placeholder="Required"/>
+        
+                            <label for="phone">Compnay</label>
+                            <input type="tel" id="phone" name="user_phone" placeholder="Required"/>
+        
+                             
+        
+                            
+                            <textarea id="topics" name="user-topics"></textarea>
+                        </fieldset>
+        
+                            <button id="submitButton" type="button" name="button">Submit</button>
+                      </div>
+        
+                    </form>
+        
+        
+                </div>
+        
+             
+        
+             </section>
+        </div>
+    </main>
+    <script>
+        function myFunction() {
+          var element = document.getElementById("menu-bar");
+          element.classList.toggle("menu-bar-open");
+        }
+  
+        function myIcon() {
+          var element = document.getElementById("button");
+          element.classList.toggle("img-open");
+        }
+  
+        document.getElementById("submitButton").addEventListener("click", () => {
+          alert(`Ups, sorry about that! Your message will get lost in space :). It's best to use the alternative options from above! Thank you :) `);
+          
+       
+        });
+      </script>
+</body>
+</html>

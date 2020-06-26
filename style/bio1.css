@@ -1,0 +1,322 @@
+body {
+  background-color: rgba(138, 132, 132, 0.342);
+  position: relative;
+  z-index: 50;
+  font-family: "Times New Roman", Times, serif !important;
+}
+
+#mainArea {
+  max-width: 960px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 250px 850px 300px;
+  grid-template-areas:
+    "profile profile profile"
+    "exp exp skills"
+    "edu edu edu";
+  border: 1px #000 solid;
+  padding: 3em;
+  z-index: 100;
+  background-color: #ffffff;
+  border-radius: 25px;
+}
+
+.mainDetails {
+  display: none;
+}
+
+.title h1 {
+  font-size: 4em;
+  padding: 0 1em;
+}
+
+.profile {
+  grid-area: profile;
+  height: 250px;
+}
+
+.profile h1 {
+  font-size: 2.5em;
+  text-align: left;
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+}
+
+.sectionContent {
+  font-size: 0.9em;
+}
+
+.sectionContent p {
+  padding: 0;
+  margin: 0;
+}
+
+.exp {
+  grid-area: exp;
+}
+
+.exp h1 {
+  font-size: 2.5em;
+  text-align: left;
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+}
+
+.exp .subDetails {
+  padding: 0;
+  margin: 0;
+  font-size: 1.3em;
+  font-style: italic;
+}
+
+.exp .duties {
+  text-align: left;
+  padding: 0.3em 1em;
+}
+
+.exp .duties:last-child {
+  padding-bottom: 1em;
+}
+
+.exp h2 {
+  padding: 0;
+  padding-bottom: 0.2em;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+.edu {
+  grid-area: edu;
+}
+
+.edu h1 {
+  font-size: 2.5em;
+  text-align: center;
+  padding-bottom: 0.5em;
+  margin-bottom: 0;
+}
+
+.edu h2 {
+  padding: 0;
+  padding-bottom: 0.2em;
+  margin-bottom: 0;
+  font-size: 1.5em;
+}
+
+.edu .subDetails {
+  padding: 0;
+  margin: 0;
+  font-style: italic;
+  font-size: 1.4em;
+}
+
+.edu .thesis {
+  padding: 0.2em 0;
+  margin: 0;
+  font-size: 1.3em;
+}
+
+.skills {
+  grid-area: skills;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.keySkills {
+  text-align: left;
+  padding-left: 2em;
+}
+
+.softSkills {
+  text-align: left;
+}
+
+.sectionContent h3 {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.sectionContent ul li {
+  font-size: 1.2em;
+}
+
+@media only screen and (max-width: 499px) {
+  .sectionContent p {
+    font-size: 1.2em;
+  }
+
+  .title h1 {
+    font-size: 1.7em;
+  }
+  .exp h2 {
+    text-align: left;
+    font-weight: bold;
+  }
+
+  #mainArea {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto auto auto;
+    grid-template-areas:
+      "profile"
+      "exp "
+      "edu"
+      "skills";
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .keySkills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .keySkills li {
+    padding: 0.5em;
+    list-style: none;
+    font-size: 1.1em;
+  }
+
+  .sectionContent h2 {
+    font-size: 1.2em;
+  }
+
+  .sectionContent p {
+    font-size: 1em;
+  }
+
+  .sectionContent .duties li {
+    font-size: 1.1em;
+  }
+
+  .sectionContent article h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .edu .subDetails {
+    text-align: left;
+    font-size: 1.2em;
+  }
+
+  .edu .thesis {
+    font-size: 1.1em;
+  }
+
+  .edu h1 {
+    text-align: left;
+  }
+
+  .softSkills {
+    text-align: center;
+  }
+
+  .sectionContent.langSkills {
+    text-align: center;
+    margin: 0 auto;
+    flex-wrap: nowrap;
+  }
+}
+
+article p a {
+  text-decoration: underline;
+  color: inherit;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 950px) {
+  .sectionContent p {
+    font-size: 1.2em;
+  }
+
+  .title h1 {
+    font-size: 2.5em;
+  }
+  .exp h2 {
+    text-align: left;
+    font-weight: bold;
+  }
+
+  #mainArea {
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto auto auto;
+    grid-template-areas:
+      "profile"
+      "exp "
+      "edu"
+      "skills";
+  }
+
+  .skills {
+    flex-direction: column;
+  }
+
+  .keySkills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .keySkills li {
+    padding: 0.5em;
+    list-style: none;
+    font-size: 1.1em;
+  }
+
+  .sectionContent h2 {
+    font-size: 1.2em;
+  }
+
+  .sectionContent {
+    width: 100%;
+  }
+
+  .sectionContent p {
+    font-size: 1.35em;
+  }
+
+  .sectionContent .duties li {
+    font-size: 1.2em;
+  }
+
+  .sectionContent article h2 {
+    font-size: 1.4em;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  .edu .subDetails {
+    text-align: left;
+    font-size: 1.3em;
+  }
+
+  .edu .thesis {
+    font-size: 1.1em;
+  }
+
+  .edu h1 {
+    text-align: left;
+  }
+
+  .softSkills {
+    text-align: center;
+  }
+
+  .dev {
+    display: block;
+    width: 100%;
+    text-align: right;
+    font-size: 30px;
+    padding-top: 20px;
+    font-family: "League Script", cursive;
+  }
+}
