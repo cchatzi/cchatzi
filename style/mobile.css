@@ -51,7 +51,8 @@ body {
 
 p {
   text-align: justify;
-  max-width: 960px;
+  max-width: 760px;
+  margin: 0 auto;
 }
 
 .firstLetter::first-letter {
